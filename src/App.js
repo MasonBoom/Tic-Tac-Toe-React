@@ -1,10 +1,18 @@
 import React from 'react';
+import { 
+  Route, 
+  Routes,
+  BrowserRouter,
+} from 'react-router-dom';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
-    <div>
-      <h1>Hello CodeSandbox</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
