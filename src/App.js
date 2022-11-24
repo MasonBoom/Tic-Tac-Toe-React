@@ -4,7 +4,7 @@ import {
   Routes,
   BrowserRouter,
 } from 'react-router-dom';
-import MainPage from './pages/MainPage';
+import MainPage from './pages/mainPage/MainPage';
 
 function App() {
   return (

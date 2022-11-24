@@ -1,10 +1,13 @@
 import React from "react";
+import {
+    MainDiv,
+} from './mainpage.styles'
 
 const MainPage = () => {
     return (
-        <div>
+        <MainDiv>
             <h1>Hello World</h1>
-        </div>
+        </MainDiv>
     )
 }
 
