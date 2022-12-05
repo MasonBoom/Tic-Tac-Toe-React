@@ -6,3 +6,4 @@ export const MainDiv = styled.div`
     width: 460px;
     height: 471px;
 `;
+
