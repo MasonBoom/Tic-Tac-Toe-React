@@ -7,3 +7,13 @@ export const MainDiv = styled.div`
     height: 471px;
 `;
 
+export const IconRow = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+`;
+
+export const ColoredIcon = styled.img`
+    width: 30px;
+    height: 30px;
+`;
