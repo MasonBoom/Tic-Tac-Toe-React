@@ -14,7 +14,6 @@ const MainPage = () => {
                 <ColoredIcon src={x} alt='x' />
                 <ColoredIcon src={o} alt='o' />
             </IconRow>
-            <h1>Hello World</h1>
         </MainDiv>
     )
 }
