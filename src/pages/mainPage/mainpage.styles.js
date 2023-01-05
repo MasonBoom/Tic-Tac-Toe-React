@@ -39,3 +39,36 @@ export const Header = styled.h3`
     letter-spacing: 1px;
     text-transform: uppercase;
 `;
+
+export const ButtonDiv = styled.div`
+    background-color: #1A2A33;
+    height: 70px;
+    width: 80%;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 24px;
+    display: flex; 
+    flex-direction: row;
+`;
+
+export const SubHeader = styled.h3`
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    text-transform: uppercase;
+`;
+
+export const ModalButton = styled.button`
+    height: 54px;
+    width: 49%;
+    margin: 8px;
+    margin-left: 8px;
+    color: #A8BFC9;
+    border-radius: 5px;
+    border: none;
+`;
