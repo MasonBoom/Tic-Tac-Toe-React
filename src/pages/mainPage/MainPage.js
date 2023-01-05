@@ -13,6 +13,9 @@ import x from '../../assets/x.svg';
 import o from '../../assets/o.svg';
 
 const MainPage = () => {
+    const [xClicked, setXClicked] = useState(false)
+    const [oClicked, setOClicked] = useState(false)
+
     return (
         <MainDiv>
             <IconRow>
