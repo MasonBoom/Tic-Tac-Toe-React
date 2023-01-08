@@ -72,3 +72,5 @@ export const ModalButton = styled.button`
     border-radius: 5px;
     border: none;
 `;
+
+
