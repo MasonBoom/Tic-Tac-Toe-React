@@ -68,9 +68,43 @@ export const ModalButton = styled.button`
     width: 49%;
     margin: 8px;
     margin-left: 8px;
-    color: #A8BFC9;
+    background-color: #1A2A33;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+
+    &.clicked {
+        background-color: #A8A8A8;
+    }
 `;
 
+export const OIcon = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 10px solid #A8A8A8;
+    background: transparent;
+    margin: auto;
 
+    &.clicked {
+        border: 10px solid #1A2A33;
+    }
+`;
+
+export const XIcon = styled.div`
+    width: 10px;
+    height: 40px;
+    border-radius: 5%;
+    background-color: #A8A8A8;
+    margin: auto;
+    rotate: 45deg;
+
+    &.clicked {
+        background-color: #1A2A33; 
+    }
+
+    &.reverse {
+        rotate: -90deg;
+
+    }
+`;

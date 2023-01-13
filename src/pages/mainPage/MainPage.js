@@ -8,6 +8,8 @@ import {
     ButtonDiv,
     SubHeader,
     ModalButton,
+    OIcon,
+    XIcon,
 } from './mainpage.styles';
 import x from '../../assets/x.svg';
 import o from '../../assets/o.svg';
@@ -15,6 +17,16 @@ import o from '../../assets/o.svg';
 const MainPage = () => {
     const [xClicked, setXClicked] = useState(false)
     const [oClicked, setOClicked] = useState(false)
+
+    const handleXClick = () => {
+        setXClicked(true);
+        setOClicked(false);
+    }
+
+    const handleOClick = () => {
+        setOClicked(true);
+        setXClicked(false);
+    }
 
     return (
         <MainDiv>
@@ -25,11 +37,13 @@ const MainPage = () => {
             <SelectionModal>
                 <Header>Pick Player 1's mark</Header>
                 <ButtonDiv>
-                    <ModalButton>
-                        <ColoredIcon src={x} alt='x' />
+                    <ModalButton onClick={handleXClick} className={xClicked === true ? 'clicked' : ''}>
+                        <XIcon className={xClicked === true ? 'clicked' : ''}>
+                            <XIcon className={xClicked === true ? 'clicked reverse' : 'reverse'}/>
+                        </XIcon>
                     </ModalButton>
-                    <ModalButton>
-                        <ColoredIcon src={o} alt='o' />
+                    <ModalButton onClick={handleOClick} className={oClicked === true ? 'clicked' : ''}>
+                        <OIcon className={oClicked === true ? 'clicked' : ''} />
                     </ModalButton>
                 </ButtonDiv>
                 <SubHeader>Remember: X goes first</SubHeader>
