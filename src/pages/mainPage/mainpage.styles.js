@@ -108,3 +108,36 @@ export const XIcon = styled.div`
 
     }
 `;
+
+export const NewGameButton = styled.button`
+    background: #F2B137;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    width: 100%;
+    border-radius: 15px;
+    height: 70px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: inset 0px 0px 0px #CC8B13;
+    }
+
+    &.vsPlayer {
+        background: #31C3BD;
+        box-shadow: inset 0px -8px 0px #118C87;
+        margin-top: 0;
+
+        &:hover {
+            box-shadow: inset 0px 0px 0px #118C87;
+        }
+    }
+`;

@@ -10,6 +10,7 @@ import {
     ModalButton,
     OIcon,
     XIcon,
+    NewGameButton,
 } from './mainpage.styles';
 import x from '../../assets/x.svg';
 import o from '../../assets/o.svg';
@@ -48,6 +49,8 @@ const MainPage = () => {
                 </ButtonDiv>
                 <SubHeader>Remember: X goes first</SubHeader>
             </SelectionModal>
+            <NewGameButton>New Game (VS CPU)</NewGameButton>
+            <NewGameButton className='vsPlayer'>New Game (VS CPU)</NewGameButton>
         </MainDiv>
     )
 }
