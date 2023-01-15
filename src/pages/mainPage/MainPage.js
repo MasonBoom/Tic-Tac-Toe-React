@@ -12,6 +12,7 @@ import {
     XIcon,
     NewGameButton,
 } from './mainpage.styles';
+import { Link } from 'react-router-dom';
 import x from '../../assets/x.svg';
 import o from '../../assets/o.svg';
 
@@ -49,8 +50,12 @@ const MainPage = () => {
                 </ButtonDiv>
                 <SubHeader>Remember: X goes first</SubHeader>
             </SelectionModal>
-            <NewGameButton>New Game (VS CPU)</NewGameButton>
-            <NewGameButton className='vsPlayer'>New Game (VS CPU)</NewGameButton>
+            <Link to={'/game'}>
+                <NewGameButton>New Game (VS CPU)</NewGameButton>
+            </Link>
+            <Link to={'/game'}>
+                <NewGameButton className='vsPlayer'>New Game (VS CPU)</NewGameButton>
+            </Link>
         </MainDiv>
     )
 }
