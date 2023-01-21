@@ -11,6 +11,10 @@ export const IconRow = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    &.gamePage {
+        justify-content: flex-start;
+    }
 `;
 
 export const ColoredIcon = styled.img`
@@ -129,15 +133,5 @@ export const NewGameButton = styled.button`
 
     &:hover {
         box-shadow: inset 0px 0px 0px #CC8B13;
-    }
-
-    &.vsPlayer {
-        background: #31C3BD;
-        box-shadow: inset 0px -8px 0px #118C87;
-        margin-top: 0;
-
-        &:hover {
-            box-shadow: inset 0px 0px 0px #118C87;
-        }
     }
 `;

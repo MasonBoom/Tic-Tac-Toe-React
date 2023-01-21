@@ -53,9 +53,6 @@ const MainPage = () => {
             <Link to={'/game'}>
                 <NewGameButton>New Game (VS CPU)</NewGameButton>
             </Link>
-            <Link to={'/game'}>
-                <NewGameButton className='vsPlayer'>New Game (VS CPU)</NewGameButton>
-            </Link>
         </MainDiv>
     )
 }
