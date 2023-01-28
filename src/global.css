@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Outfit';
-    src: local('Outfit'), url(./fonts/Outfit.ttf) format('truetype');
+  font-family: 'Outfit';
+  src: local('Outfit'), url(./fonts/Outfit.ttf) format('truetype');
 }
 
 body {
-    background-color: #1A2A33;
+  background-color: #1A2A33;
 }
