@@ -4,6 +4,7 @@ import {
   TopRow,
   PlayerTurn,
   RestartButton,
+  Table,
 } from './game.styles';
 import {
   IconRow,
@@ -16,6 +17,45 @@ import grayO from '../../assets/grayO.svg';
 import restart from '../../assets/restart.svg';
 
 const Game = () => {
+
+  const Board = () => {
+    return (
+      <Table>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td className="score">
+              <span>X (you)</span>
+              <h3>15</h3>
+            </td>
+            <td className="score ties">
+              <span>Ties</span>
+              <h3>15</h3>
+            </td>
+            <td className="score oScore">
+              <span>O (CPU)</span>
+              <h3>10</h3>
+            </td>
+          </tr>
+        </tbody>
+      </Table>
+    )
+  }
+
   return (
     <GameContainer>
       <TopRow>
@@ -31,6 +71,7 @@ const Game = () => {
           <img src={restart} alt="restart icon" />
         </RestartButton>
       </TopRow>
+      <Board />
     </GameContainer>
   );
 }
