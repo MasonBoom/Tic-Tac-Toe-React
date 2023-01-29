@@ -13,13 +13,17 @@ export const IconRow = styled.div`
   justify-content: center;
 
   &.gamePage {
-    justify-content: flex-start;
+    margin-top: 12px;
   }
 `;
 
 export const ColoredIcon = styled.img`
   width: 30px;
   height: 30px;
+
+  &.gamePage {
+    margin-right: 6px;
+  }
 `;
 
 export const SelectionModal = styled.div`

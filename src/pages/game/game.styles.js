@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const GameContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 130px 700px;
+  width: 700px;
+  height: 700px;
+  margin: 120px auto;
 `;
 
 export const TopRow = styled.div`
@@ -19,10 +21,11 @@ export const PlayerTurn = styled.div`
   width: 140px;
   height: 52px;
   margin: auto;
-  margin-top: -10px;
   justify-content: center;
   align-items: center;
   display: flex;
+  margin-left: 30%;
+  
 
   span {
     font-family: 'Outfit';
@@ -41,4 +44,13 @@ export const PlayerTurn = styled.div`
     margin-right: 10px;
     margin-top: -2px;
   }
+`;
+
+export const RestartButton = styled.button`
+  width: 52px;
+  height: 52px;
+  background: #A8BFC9;
+  box-shadow: inset 0px -4px 0px #6B8997;
+  border-radius: 10px;
+  border: none;
 `;
