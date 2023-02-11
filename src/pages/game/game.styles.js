@@ -74,11 +74,26 @@ export const Table = styled.table`
     box-shadow: inset 0px -8px 0px #10212A;
     border-radius: 15px;
     margin-bottom: 33px;
+    cursor: pointer;
+
+    img {
+      display: none;
+      width: 50%;
+      height: 50%;
+    }
+
+    &:hover {
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
 
     &.score {
       background: #31C3BD;
       height: 80px;
       box-shadow: none;
+      cursor: auto;
       
       span {
         font-family: 'Outfit';
@@ -105,10 +120,12 @@ export const Table = styled.table`
 
       &.ties {
         background: #A8BFC9;
+        cursor: auto;
       }
 
       &.oScore {
         background: #F2B137;
+        cursor: auto;
       }
     }
   }

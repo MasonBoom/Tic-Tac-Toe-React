@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   GameContainer,
   TopRow,
@@ -15,28 +15,42 @@ import o from '../../assets/o.svg';
 import grayX from '../../assets/grayX.svg';
 import grayO from '../../assets/grayO.svg';
 import restart from '../../assets/restart.svg';
+import hoverX from '../../assets/hoverX.svg';
+import hoverO from '../../assets/hoverO.svg';
 
 const Game = () => {
+  const [playerTurn, setPlayerTurn] = useState('x')
+
+  const handleClick = () => {
+    setPlayerTurn(playerTurn === 'x' ? 'o' : 'x')
+  }
+
+  const Cell = () => {
+    return (
+      <td onClick={handleClick}>
+        {playerTurn === 'x' ?
+          <img src={hoverX} alt="x icon hover" /> :
+          <img src={hoverO} alt="o icon hover" />
+        }
+      </td>
+    )
+  }
 
   const Board = () => {
     return (
       <Table>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          {
+            [...Array(3)].map((_, i) => {
+              return (
+                <tr>
+                  <Cell />
+                  <Cell />
+                  <Cell />
+                </tr>
+              )
+            })
+          }
           <tr>
             <td className="score">
               <span>X (you)</span>
@@ -64,7 +78,10 @@ const Game = () => {
           <ColoredIcon src={o} alt='o' />
         </IconRow>
         <PlayerTurn>
-          <img src={grayO} alt='grayX' />
+          {playerTurn === 'x' ? 
+          <img src={grayX} alt="x icon" /> : 
+          <img src={grayO} alt="o icon" />
+          }
           <span>Turn</span>
         </PlayerTurn>
         <RestartButton>
