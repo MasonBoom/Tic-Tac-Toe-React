@@ -20,12 +20,12 @@ export default function NewGamePage() {
 
   const startGameVsCpu = () => {
     setVsCpu(true);
-    navigate("/start");
+    navigate("/game");
   };
 
   const startTwoPlayerGame = () => {
     setVsCpu(false);
-    navigate("/start");
+    navigate("/game");
   };
 
   return (
