@@ -13,8 +13,9 @@ Here is a link to the live website: https://peaceful-torte-909a46.netlify.app/
 - React/JSX
 - React hooks
 - React Router
+- JavaScript
 - CSS
-- SVG icons
+- Scalable Vector Graphics (SVG)
 
 ## Gameplay
 
