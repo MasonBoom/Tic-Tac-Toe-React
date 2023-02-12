@@ -1,5 +1,4 @@
 .scoreBoardContainer {
-  /* border: dashed 2px red; */
   display: grid;
   grid-template-columns: repeat(3, 90px);
   grid-gap: 25px;
@@ -18,7 +17,6 @@
 }
 
 .scoreHeader {
-  /* font-weight: 500; */
   font-size: 0.8rem;
   color: var(--secondary-text-color);
 }
@@ -42,11 +40,8 @@
 }
 
 @media (min-width: 600px) {
-  /* these are the same settings as the game board in MainGameBoard.module.css */
-  /* they need to stay in sync or the grid doesn't line up */
   .scoreBoardContainer {
     grid-template-columns: repeat(3, 150px);
-    /* grid-template-rows: repeat(3, 150px); */
     width: calc(150px * 3 + 25px * 3);
   }
 }
