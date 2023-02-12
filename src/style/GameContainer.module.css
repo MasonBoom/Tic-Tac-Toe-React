@@ -1,7 +1,6 @@
 .gameContainer {
   width: 95%;
-  margin: 0 auto;
-  /* min-height: 100vh; */
+  margin: 12vh auto 0;
 }
 
 @media (min-width: 700px) {
