@@ -10,7 +10,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<NewGamePage />} />
-          <Route exact path="/start" element={<MainGameBoard />} />
+          <Route exact path="/game" element={<MainGameBoard />} />
         </Routes>
       </Router>
     </ContextProvider>
