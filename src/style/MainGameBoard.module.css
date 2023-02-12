@@ -1,0 +1,25 @@
+.gameBoardContainer {
+  display: grid;
+
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  width: calc(90px * 3 + 25px * 3);
+  grid-gap: 25px;
+  margin: 0 auto;
+  padding-left: 12px;
+}
+
+.dialogButtonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 3rem;
+}
+
+@media (min-width: 600px) {
+  .gameBoardContainer {
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    width: calc(150px * 3 + 25px * 3);
+  }
+}

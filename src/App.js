@@ -1,21 +1,18 @@
-import React from 'react';
-import { 
-  Route, 
-  Routes,
-  BrowserRouter,
-} from 'react-router-dom';
-import MainPage from './pages/mainPage/MainPage';
-import Game from './pages/game/Game';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./global.css";
+import NewGamePage from "./pages/NewGamePage";
+import MainGameBoard from "./pages/MainGameBoard";
+import ContextProvider from "./context/ContextProvider";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/game" element={<Game />} />
-      </Routes>
-    </BrowserRouter>
+    <ContextProvider>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<NewGamePage />} />
+          <Route exact path="/start" element={<MainGameBoard />} />
+        </Routes>
+      </Router>
+    </ContextProvider>
   );
 }
-
-export default App;

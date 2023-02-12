@@ -1,0 +1,22 @@
+.newGameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.playerIcon {
+  height: 32px;
+  width: 32px;
+  margin-right: 10px;
+}
+
+.playerIconContainer {
+  text-align: center;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
