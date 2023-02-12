@@ -77,9 +77,10 @@ export const Table = styled.table`
     cursor: pointer;
 
     img {
-      display: none;
+      display: block;
       width: 50%;
       height: 50%;
+      margin: auto;
     }
 
     &:hover {

@@ -20,18 +20,30 @@ import hoverO from '../../assets/hoverO.svg';
 
 const Game = () => {
   const [playerTurn, setPlayerTurn] = useState('x')
+  const [cells, setCells] = useState(Array(9).fill(''))
+  const [xWins, setXWins] = useState(0)
+  const [oWins, setOWins] = useState(0)
+  const [ties, setTies] = useState(0)
 
-  const handleClick = () => {
-    setPlayerTurn(playerTurn === 'x' ? 'o' : 'x')
+  const handleClick = (num) => {
+    let squares = [...cells]
+
+    if (playerTurn === 'x') {
+      squares[num] = 'x'
+      setPlayerTurn('o')
+    } else {
+      squares[num] = 'o'
+      setPlayerTurn('o')
+    }
+    setCells(squares)
+    console.log(squares)
   }
 
-  const Cell = () => {
+  const Cell = ({ num }) => {
+
     return (
-      <td onClick={handleClick}>
-        {playerTurn === 'x' ?
-          <img src={hoverX} alt="x icon hover" /> :
-          <img src={hoverO} alt="o icon hover" />
-        }
+      <td onClick={handleClick(num)}>
+        {cells[num]}
       </td>
     )
   }
@@ -40,29 +52,33 @@ const Game = () => {
     return (
       <Table>
         <tbody>
-          {
-            [...Array(3)].map((_, i) => {
-              return (
-                <tr>
-                  <Cell />
-                  <Cell />
-                  <Cell />
-                </tr>
-              )
-            })
-          }
+          <tr>
+            <Cell num={0} />
+            <Cell num={1} />
+            <Cell num={2} />
+          </tr>
+          <tr>
+            <Cell num={3} />
+            <Cell num={4} />
+            <Cell num={5} />
+          </tr>
+          <tr>
+            <Cell num={6} />
+            <Cell num={7} />
+            <Cell num={8} />
+          </tr>
           <tr>
             <td className="score">
               <span>X (you)</span>
-              <h3>15</h3>
+              <h3>{xWins}</h3>
             </td>
             <td className="score ties">
               <span>Ties</span>
-              <h3>15</h3>
+              <h3>{ties}</h3>
             </td>
             <td className="score oScore">
               <span>O (CPU)</span>
-              <h3>10</h3>
+              <h3>{oWins}</h3>
             </td>
           </tr>
         </tbody>
@@ -79,8 +95,8 @@ const Game = () => {
         </IconRow>
         <PlayerTurn>
           {playerTurn === 'x' ? 
-          <img src={grayX} alt="x icon" /> : 
-          <img src={grayO} alt="o icon" />
+            <img src={grayX} alt="x icon" /> : 
+            <img src={grayO} alt="o icon" />
           }
           <span>Turn</span>
         </PlayerTurn>
